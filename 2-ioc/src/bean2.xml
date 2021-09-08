@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="stu" class="spring5.bean.Stu">
+       <property name="strs">
+           <array>
+               <value>str1</value>
+               <value>str2</value>
+           </array>
+       </property>
+       <property name="list">
+           <list>
+               <value>list1</value>
+               <value>list2</value>
+           </list>
+       </property>
+       <property name="map">
+           <map>
+               <entry key="key1" value="value1"></entry>
+               <entry key="key2" value="value2"></entry>
+           </map>
+       </property>
+       <property name="set">
+           <set>
+               <value>set1</value>
+               <value>set2</value>
+           </set>
+       </property>
+       <property name="articleList">
+           <list>
+               <ref bean="article1"></ref>
+               <ref bean="article2"></ref>
+           </list>
+       </property>
+       <property name="articleMap">
+           <map>
+               <entry key="key1" value-ref="article1"></entry>
+               <entry key="key2" value-ref="article2"></entry>
+           </map>
+       </property>
+       <property name="articleSet">
+           <set>
+               <ref bean="article1"></ref>
+               <ref bean="article2"></ref>
+           </set>
+       </property>
+   </bean>
+    <bean id="article1" class="spring5.bean.Article">
+        <property name="content" value="article1"></property>
+    </bean>
+    <bean id="article2" class="spring5.bean.Article">
+        <property name="content" value="article2"></property>
+    </bean>
+</beans>
