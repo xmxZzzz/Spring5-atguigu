@@ -10,6 +10,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="2-ioc" target="8" />
+      <module name="2-ioc-annotation" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

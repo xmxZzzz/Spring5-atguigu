@@ -1,10 +1,12 @@
-package spring5.test;
+package com.example.spring5.test;
 
-import com.sun.org.apache.bcel.internal.util.ClassPath;
+import com.example.spring5.bean.Book;
+import com.example.spring5.bean.Course;
+import com.example.spring5.bean.Stu;
+import com.example.spring5.bean.Teacher;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spring5.bean.*;
 
 /**
  * @ProjectName: spring5-code

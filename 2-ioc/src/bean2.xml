@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-   <bean id="stu" class="spring5.bean.Stu">
+   <bean id="stu" class="com.example.spring5.bean.Stu">
        <property name="strs">
            <array>
                <value>str1</value>
@@ -47,10 +47,10 @@
            </set>
        </property>
    </bean>
-    <bean id="article1" class="spring5.bean.Article">
+    <bean id="article1" class="com.example.spring5.bean.Article">
         <property name="content" value="article1"></property>
     </bean>
-    <bean id="article2" class="spring5.bean.Article">
+    <bean id="article2" class="com.example.spring5.bean.Article">
         <property name="content" value="article2"></property>
     </bean>
 </beans>

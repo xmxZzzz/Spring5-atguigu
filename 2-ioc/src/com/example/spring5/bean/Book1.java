@@ -1,4 +1,4 @@
-package spring5.bean;
+package com.example.spring5.bean;
 
 /**
  * @ProjectName: spring5-code

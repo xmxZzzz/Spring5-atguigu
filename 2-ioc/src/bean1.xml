@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="book" class="spring5.bean.Book">
+    <bean id="book" class="com.example.spring5.bean.Book">
         <property name="name" value="Spring5框架"></property>
         <property name="author" value="尚硅谷"></property>
         <constructor-arg name="version" value="v1.0"></constructor-arg>
@@ -15,13 +15,13 @@
         </property>
         <property name="article" ref="article"></property>
         <property name="book1">
-            <bean id="book1" class="spring5.bean.Book1">
+            <bean id="book1" class="com.example.spring5.bean.Book1">
                 <constructor-arg name="bname" value="book1"></constructor-arg>
             </bean>
         </property>
     </bean>
 
-    <bean id="article" class="spring5.bean.Article">
+    <bean id="article" class="com.example.spring5.bean.Article">
         <property name="content" value="文章内容"></property>
     </bean>
 </beans>
