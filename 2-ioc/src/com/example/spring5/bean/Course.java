@@ -22,11 +22,4 @@ public class Course {
     public List<String> getCname() {
         return cname;
     }
-
-    @Override
-    public String toString() {
-        return "Course{" +
-                "cname=" + cname +
-                '}';
-    }
 }

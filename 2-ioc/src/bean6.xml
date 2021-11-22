@@ -5,16 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <util:list id="list">
-        <value>list1</value>
-        <value>list2</value>
-    </util:list>
-    <bean id="course" class="com.example.spring5.bean.Course" scope="singleton">
-        <property name="cname" ref="list"></property>
+    <!--
+        自动装配：autowired
+        1、byname:要求类中的属性名和id值一致
+        2、byType：根据属性类型进行注入，要求该类型只能存在一个
+    -->
+    <bean id="emp" class="com.example.spring5.bean.Emp" autowire="byName">
+        <!--手动装配-->
+        <!-- <property name="dept" ref="dept"></property>-->
     </bean>
 
-    <bean id="teacher" class="com.example.spring5.bean.Teacher">
-        <property name="tname" value="teacher1"></property>
-        <property name="cname" ref="list"></property>
-    </bean>
+    <bean id="dept" class="com.example.spring5.bean.Dept"></bean>
+
 </beans>

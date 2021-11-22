@@ -5,16 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <util:list id="list">
-        <value>list1</value>
-        <value>list2</value>
-    </util:list>
-    <bean id="course" class="com.example.spring5.bean.Course" scope="singleton">
-        <property name="cname" ref="list"></property>
+    <bean id="order" class="com.example.spring5.bean.Order" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="oname" value="spring"></property>
     </bean>
 
-    <bean id="teacher" class="com.example.spring5.bean.Teacher">
-        <property name="tname" value="teacher1"></property>
-        <property name="cname" ref="list"></property>
-    </bean>
+    <!-- 对同一个xml文件中的所有bean都配置后置处理器-->
+    <bean id="myBeanPost" class="com.example.spring5.bean.MyBeanPost"></bean>
 </beans>
