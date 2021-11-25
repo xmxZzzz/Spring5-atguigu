@@ -2,6 +2,7 @@ package com.example.spring5.aopanno;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Order(1)
 public class UserProxy {
 
     /*
@@ -23,11 +25,27 @@ public class UserProxy {
         (2) before around -> before ->  after -> afterThrowing
      */
 
+    /*
+     * @Method commonPoint
+     * @Version  1.0
+     * @Description 提取相同的切入点
+     * @Date 2021/11/26 上午12:33
+     */
+    @Pointcut(value="execution(* com.example.spring5.aopanno.User.add(..))")
+    public void commonPoint(){}
+
     //前置通知
-    @Before(value = "execution(* com.example.spring5.aopanno.User.add(..))")
-    public void before(){
-        System.out.println("before...");
+    @Before(value = "commonPoint()")
+    public void newBefore(){
+        System.out.println(" UserProxy new before...");
     }
+
+
+    //前置通知
+//    @Before(value = "execution(* com.example.spring5.aopanno.User.add(..))")
+//    public void before(){
+//        System.out.println("before...");
+//    }
 
     //后置通知
     @AfterReturning(value = "execution(* com.example.spring5.aopanno.User.add(..))")
