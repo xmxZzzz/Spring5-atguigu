@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/2-ioc/2-ioc.iml" filepath="$PROJECT_DIR$/2-ioc/2-ioc.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-ioc-anno/2-ioc-anno.iml" filepath="$PROJECT_DIR$/2-ioc-anno/2-ioc-anno.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-aop/3-aop.iml" filepath="$PROJECT_DIR$/3-aop/3-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4-JdbcTemplate/4-JdbcTemplate.iml" filepath="$PROJECT_DIR$/4-JdbcTemplate/4-JdbcTemplate.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring5-code.iml" filepath="$PROJECT_DIR$/spring5-code.iml" />
     </modules>
   </component>
