@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -42,5 +43,27 @@ public class TestJdbcTemplate {
         //测试查询返回某个对象：Book
         List<Book> books = bookService.findAll();
         System.out.println(books.toString());
+    }
+
+    @Test
+    public void testBatch(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
+        BookService bookService = context.getBean("bookService", BookService.class);
+        //批量插入
+//        Object[] o1={"3","c++","a"};
+//        Object[] o2={"4","c#","b"};
+//        Object[] o3={"5","mysql","c"};
+//        bookService.batchAdd(Arrays.asList(o1,o2,o3));
+
+        //批量更新
+//        Object[] o1={"C++","aa","3"};
+//        Object[] o2={"C#","bb","4"};
+//        Object[] o3={"MySQL","cc","5"};
+//        bookService.batchUpdate(Arrays.asList(o1,o2,o3));
+
+        //批量删除
+        Object[] o1={"3"};
+        Object[] o2={"4"};
+        bookService.batchDelete(Arrays.asList(o1,o2));
     }
 }

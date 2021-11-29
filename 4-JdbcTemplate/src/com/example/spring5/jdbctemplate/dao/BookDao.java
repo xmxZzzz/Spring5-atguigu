@@ -23,4 +23,13 @@ public interface BookDao {
 
     //查询返回表中的所有数据
     List<Book> findAllBook();
+
+    //批量添加
+    void batchAddBook(List<Object[]> batchArgs);
+
+    //批量更新
+    void batchUpdateBook(List<Object[]> batchArgs);
+
+    //批量删除
+    void batchDeleteBook(List<Object[]> batchArgs);
 }
