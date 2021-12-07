@@ -3,8 +3,10 @@ package com.example.spring5.transaction.normal.service;
 import com.example.spring5.transaction.normal.dao.AccountDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
+@Transactional(isolation = Isolation.REPEATABLE_READ,timeout = -1,readOnly = false)
 @Service
 public class AccountService {
 
