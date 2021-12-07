@@ -1,4 +1,4 @@
-package com.example.spring5.transaction.entity;
+package com.example.spring5.transaction.normal.entity;
 
 public class Account {
     private String id;

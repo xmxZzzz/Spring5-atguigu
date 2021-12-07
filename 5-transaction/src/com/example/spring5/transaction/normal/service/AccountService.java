@@ -1,6 +1,6 @@
-package com.example.spring5.transaction.service;
+package com.example.spring5.transaction.normal.service;
 
-import com.example.spring5.transaction.dao.AccountDao;
+import com.example.spring5.transaction.normal.dao.AccountDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
