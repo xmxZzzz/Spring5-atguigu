@@ -29,7 +29,7 @@ public class AccountService {
         accountDao.reduceMoney(fromUsername, money);
 
         //模拟异常
-        int i = 10/0;
+//        int i = 10/0;
 
         //后加钱
         accountDao.addMoney(toUsername, money);
