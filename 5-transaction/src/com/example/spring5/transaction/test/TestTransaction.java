@@ -1,7 +1,8 @@
 package com.example.spring5.transaction.test;
 
-import com.example.spring5.transaction.normal.service.AccountService;
+import com.example.spring5.transaction.annotation.service.AccountService;
 import com.example.spring5.transaction.propagation.service.HandleAccountService;
+import com.example.spring5.transaction.xml.service.AccountXMLService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -48,5 +49,12 @@ public class TestTransaction {
 
         //测试Propagation.NESTED
         handleAccountService.testNestedPropagation();
+    }
+
+    @Test
+    public void testTransactionXML(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean2.xml");
+        AccountXMLService accountService = context.getBean("accountXMLService", AccountXMLService.class);
+        accountService.accountMoney("tom", "jerry",100);
     }
 }
