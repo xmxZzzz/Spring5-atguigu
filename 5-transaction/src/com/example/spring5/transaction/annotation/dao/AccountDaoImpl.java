@@ -1,4 +1,4 @@
-package com.example.spring5.transaction.normal.dao;
+package com.example.spring5.transaction.annotation.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

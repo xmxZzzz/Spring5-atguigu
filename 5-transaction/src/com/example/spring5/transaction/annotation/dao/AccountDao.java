@@ -1,4 +1,4 @@
-package com.example.spring5.transaction.normal.dao;
+package com.example.spring5.transaction.annotation.dao;
 
 public interface AccountDao {
 
